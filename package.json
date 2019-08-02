@@ -14,5 +14,8 @@
     "express": "^4.17.1",
     "mongoose": "^5.6.7",
     "njs": "0.0.2"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.0"
   }
 }

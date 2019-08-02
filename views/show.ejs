@@ -1,10 +1,14 @@
 <% include ./partials/header %>
-<h1>Olá</h1>
-    <div>
-        <h2> <%= blog.title %></h2>
-        <img src="<%=blog.image%>" alt="">
-        <span> <%= blog.created.toDateString() %></span>
-        <p> <%= blog.body %></p>
-    </div>
 
+<h1>Olá</h1>
+    <div class="container">
+        <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="<%=blog.image%>" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text"><%- blog.body %></p>
+                    <span><%= blog.created.toDateString() %></span>
+                </div>
+         </div>
+    </div>
 <% include ./partials/footer %> 
