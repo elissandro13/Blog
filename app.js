@@ -7,7 +7,7 @@ const   bodyParser  =   require("body-parser"),
 
 mongoose.connect("mongodb://localhost/blogApp", { useNewUrlParser: true });
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(method("_method"));
 mongoose.set('useNewUrlParser', true);
@@ -92,6 +92,13 @@ app.put("/blogs/:id", function(req, res){
         }
     });
 });
+
+app.delete("/blogs/:id", function(req,res){
+    Blog.findOneAndDelete(req.params.id, req.body.blog, function(){
+        res.redirect("/blogs");
+    });
+});
+
 
 app.listen(3000, function(){
     console.log("The process is running");

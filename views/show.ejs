@@ -9,6 +9,12 @@
                     <p class="card-text"><%- blog.body %></p>
                     <span><%= blog.created.toDateString() %></span>
                 </div>
-         </div>
+                <form action="">
+                    <a href="/blogs/<%=blog._id%>/edit" class="btn btn-outline-secondary"> Edit </a>
+                </form>
+                <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-outline-danger">Delete</button>
+                </form>
+            </div>
     </div>
 <% include ./partials/footer %> 
