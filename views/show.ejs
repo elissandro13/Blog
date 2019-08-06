@@ -1,20 +1,19 @@
 <% include ./partials/header %>
 
-<h1>Olá</h1>
-    <div class="container">
-        <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="<%=blog.image%>" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text"><%- blog.body %></p>
-                    <span><%= blog.created.toDateString() %></span>
-                </div>
-                <form action="">
-                    <a href="/blogs/<%=blog._id%>/edit" class="btn btn-outline-secondary"> Edit </a>
-                </form>
-                <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
-                    <button class="btn btn-outline-danger">Delete</button>
-                </form>
+<div class="container" style="margin: 100px">
+    <div class="card" style="width: 18rem; margin: 0 auto;">
+            <img class="card-img-top" src="<%=blog.image%>" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"><%- blog.body %></p>
+                <span><%= blog.created.toDateString() %></span>
             </div>
-    </div>
+            <form action="">
+                <a href="/blogs/<%=blog._id%>/edit" class="btn btn-outline-secondary"> Edit </a>
+            </form>
+            <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+                <button class="btn btn-outline-danger">Delete</button>
+            </form>
+        </div>
+</div>
 <% include ./partials/footer %> 
