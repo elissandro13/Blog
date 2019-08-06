@@ -9,7 +9,7 @@ A RESTful blog using node js and mongodb
 
 
 ## What I Learned
-* RESTful routs
+* RESTful routes
 * Mongodb basic interations
 * Basic express notions
 * Packege controll with npm
